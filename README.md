@@ -14,7 +14,7 @@ npm i edge-error
 
 Then use it as follows
 
-```
+```js
 const { EdgeError } = require('edge-error')
 throw new EdgeError('message', 'status', {
   line: 1,

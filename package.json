@@ -1,7 +1,7 @@
 {
   "name": "edge-error",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create errors custom stack trace pointing to the Edge source file",
   "main": "build/src/index.js",
   "typings": "build/src/index.d.ts",
   "files": [
@@ -53,5 +53,16 @@
       ".ts"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppinss/edge-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/poppinss/edge-error/issues"
+  },
+  "homepage": "https://github.com/poppinss/edge-error#readme"
 }
