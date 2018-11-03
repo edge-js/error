@@ -9,14 +9,14 @@
   ],
   "scripts": {
     "pretest": "npm run lint",
-    "test": "japa",
+    "test": "node japaFile.js",
     "mrm": "mrm --preset=@adonisjs/mrm-preset",
     "commit": "git-cz",
     "prepublishOnly": "npm run build",
-    "lint": "tslint --project tsconfig.json",
     "clean": "del build",
     "compile": "npm run lint && npm run clean && tsc",
-    "build": "npm run compile"
+    "build": "npm run compile",
+    "lint": "tslint --project tsconfig.json"
   },
   "keywords": [
     "edge",
@@ -25,19 +25,20 @@
   "author": "virk",
   "license": "MIT",
   "devDependencies": {
-    "@adonisjs/mrm-preset": "^1.0.7",
-    "@types/node": "^10.5.2",
-    "commitizen": "^2.10.1",
+    "@adonisjs/mrm-preset": "^1.0.14",
+    "@types/node": "^10.12.2",
+    "commitizen": "^3.0.4",
     "cz-conventional-changelog": "^2.1.0",
     "del-cli": "^1.1.0",
-    "japa": "^1.0.6",
+    "japa": "^2.0.6",
     "japa-cli": "^1.0.1",
-    "mrm": "^1.2.0",
-    "pkg-ok": "^2.2.0",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "tslint-eslint-rules": "^5.3.1",
-    "typescript": "^2.9.2"
+    "mrm": "^1.2.1",
+    "pkg-ok": "^2.3.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.1.6",
+    "yorkie": "^2.0.0"
   },
   "config": {
     "commitizen": {
@@ -46,8 +47,7 @@
   },
   "nyc": {
     "exclude": [
-      "test",
-      "japaFile.js"
+      "test"
     ],
     "extension": [
       ".ts"
@@ -64,5 +64,8 @@
   "bugs": {
     "url": "https://github.com/poppinss/edge-error/issues"
   },
-  "homepage": "https://github.com/poppinss/edge-error#readme"
+  "homepage": "https://github.com/poppinss/edge-error#readme",
+  "gitHooks": {
+    "commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
+  }
 }
