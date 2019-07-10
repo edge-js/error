@@ -3,7 +3,7 @@
   "ts": true,
   "license": "MIT",
   "services": [
-    "travis"
+    "circleci"
   ],
-  "minNodeVersion": "8.0.0"
+  "minNodeVersion": "10.15.3"
 }

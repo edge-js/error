@@ -1,21 +1,33 @@
-# edge-error
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of contents
+
+- [Edge error](#edge-error)
+  - [Usage](#usage)
+  - [Maintainers](#maintainers)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Edge error
 > Create errors custom stack trace pointing to the Edge source file
 
-[![travis-image]][travis-url]
-[![npm-image]][npm-url]
-![](https://img.shields.io/badge/Uses-Typescript-294E80.svg?style=flat-square&colorA=ddd)
+[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
 
 ## Usage
-Grab the package from npm as `edge-error`
+Install the package from npm registry as follows
 
 ```bash
 npm i edge-error
+
+# yarn
+yarn add edge-error
 ```
 
 Then use it as follows
 
 ```js
 const { EdgeError } = require('edge-error')
+
 throw new EdgeError('message', 'status', {
   line: 1,
   col: 2,
@@ -23,25 +35,16 @@ throw new EdgeError('message', 'status', {
 })
 ```
 
-## Change log
+## Maintainers
+[Harminder virk](https://github.com/thetutlage)
 
-The change log can be found in the [CHANGELOG.md](https://github.com/poppinss/edge-error/CHANGELOG.md) file.
+[circleci-image]: https://img.shields.io/circleci/project/github/edge-js/edge-error/master.svg?style=for-the-badge&logo=circleci
+[circleci-url]: https://circleci.com/gh/edge-js/edge-error "circleci"
 
-## Contributing
-
-Everyone is welcome to contribute. Please go through the following guides, before getting started.
-
-1. [Contributing](https://adonisjs.com/contributing)
-2. [Code of conduct](https://adonisjs.com/code-of-conduct)
-
-
-## Authors & License
-[thetutlage](https://github.com/thetutlage) and [contributors](https://github.com/poppinss/edge-error/graphs/contributors).
-
-MIT License, see the included [MIT](LICENSE.md) file.
-
-[travis-image]: https://img.shields.io/travis/poppinss/edge-error/master.svg?style=flat-square&logo=travis
-[travis-url]: https://travis-ci.org/poppinss/edge-error "travis"
-
-[npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=flat-square&logo=npm
+[npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.org/package/edge-error "npm"
+
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+
+[license-url]: LICENSE.md
+[license-image]: https://img.shields.io/aur/license/pac.svg?style=for-the-badge
