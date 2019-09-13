@@ -38,7 +38,7 @@ throw new EdgeError('message', 'status', {
 ## Maintainers
 [Harminder virk](https://github.com/thetutlage)
 
-[circleci-image]: https://img.shields.io/circleci/project/github/edge-js/edge-error/master.svg?style=for-the-badge&logo=circleci
+[circleci-image]: https://img.shields.io/circleci/project/gh/edge-js/error/master.svg?style=for-the-badge&logo=circleci
 [circleci-url]: https://circleci.com/gh/edge-js/edge-error "circleci"
 
 [npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
