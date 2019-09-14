@@ -25,7 +25,7 @@ export class EdgeError extends Error {
     this.filename = options.filename
 
     const stack = this.stack!.split('\n')
-    stack.splice(1, 0, `    at (${this.filename}:${this.line}:${this.col})`)
+    stack.splice(1, 0, `    at anonymous (${this.filename}:${this.line}:${this.col})`)
     this.stack = stack.join('\n')
   }
 }

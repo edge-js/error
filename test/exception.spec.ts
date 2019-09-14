@@ -20,5 +20,5 @@ test('raise error with given filename', (assert) => {
 
 test('patch error stack with the filename and line:col', (assert) => {
   const error = new EdgeError('unclosed tag slot', 'E_UNCLOSED_TAG', { line: 2, col: 0, filename: 'index.edge' })
-  assert.equal(error.stack!.split('\n')[1], '    at (index.edge:2:0)')
+  assert.equal(error.stack!.split('\n')[1], '    at anonymous (index.edge:2:0)')
 })
