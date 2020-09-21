@@ -11,7 +11,7 @@
 # Edge error
 > Create errors custom stack trace pointing to the Edge source file
 
-[![circleci-image]][circleci-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
+[![circleci-image]][circleci-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url] [![audit-report-image]][audit-report-url]
 
 ## Usage
 Install the package from npm registry as follows
@@ -38,13 +38,13 @@ throw new EdgeError('message', 'status', {
 ## Maintainers
 [Harminder virk](https://github.com/thetutlage)
 
-[circleci-image]: https://img.shields.io/circleci/project/gh/edge-js/error/master.svg?style=for-the-badge&logo=circleci
-[circleci-url]: https://circleci.com/gh/edge-js/edge-error "circleci"
-
-[npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
-[npm-url]: https://npmjs.org/package/edge-error "npm"
-
+[circleci-image]: https://img.shields.io/circleci/project/github/edge-js/error/master.svg?style=for-the-badge&logo=circleci
+[circleci-url]: https://circleci.com/gh/edge-js/error 'circleci'
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
-
-[license-url]: LICENSE.md
-[license-image]: https://img.shields.io/aur/license/pac.svg?style=for-the-badge
+[typescript-url]: "typescript"
+[npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
+[npm-url]: https://npmjs.org/package/edge-error 'npm'
+[license-image]: https://img.shields.io/npm/l/edge-error?color=blueviolet&style=for-the-badge
+[license-url]: LICENSE.md 'license'
+[audit-report-image]: https://img.shields.io/badge/-Audit%20Report-blueviolet?style=for-the-badge
+[audit-report-url]: https://htmlpreview.github.io/?https://github.com/edge-js/error/blob/develop/npm-audit.html 'audit-report'
