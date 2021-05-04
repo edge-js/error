@@ -1,9 +1,11 @@
-<div align="center"><img src="https://res.cloudinary.com/adonis-js/image/upload/q_100/v1600679850/edge-banner_wao6ex.png" width="600px"></div>
+<div align="center"><img src="https://res.cloudinary.com/adonis-js/image/upload/v1620150474/edge-banner_tzmnox.jpg" width="600px"></div>
 
 # Edge error
 > Create errors custom stack trace pointing to the Edge source file
 
 [![circleci-image]][circleci-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url] [![synk-image]][synk-url]
+
+The package extends the native Error class and adds support for pushing an error stack frame pointing to an Edge template.
 
 ## Usage
 Install the package from npm registry as follows
@@ -23,12 +25,9 @@ const { EdgeError } = require('edge-error')
 throw new EdgeError('message', 'status', {
   line: 1,
   col: 2,
-  filename: '/path/to/index.edge'
+  filename: 'absolute/path/to/index.edge'
 })
 ```
-
-## Maintainers
-[Harminder virk](https://github.com/thetutlage)
 
 [circleci-image]: https://img.shields.io/circleci/project/github/edge-js/error/master.svg?style=for-the-badge&logo=circleci
 [circleci-url]: https://circleci.com/gh/edge-js/error 'circleci'
