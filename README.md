@@ -3,7 +3,7 @@
 # Edge error
 > Create errors custom stack trace pointing to the Edge source file
 
-[![circleci-image]][circleci-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url] [![synk-image]][synk-url]
+[![gh-workflow-image]][gh-workflow-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url] [![synk-image]][synk-url]
 
 The package extends the native Error class and adds support for pushing an error stack frame pointing to an Edge template.
 
@@ -29,8 +29,8 @@ throw new EdgeError('message', 'status', {
 })
 ```
 
-[circleci-image]: https://img.shields.io/circleci/project/github/edge-js/error/master.svg?style=for-the-badge&logo=circleci
-[circleci-url]: https://circleci.com/gh/edge-js/error 'circleci'
+[gh-workflow-image]: https://img.shields.io/github/workflow/status/edge/error/test?style=for-the-badge
+[gh-workflow-url]: https://github.com/edge/error/actions/workflows/test.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]: "typescript"
