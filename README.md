@@ -29,8 +29,8 @@ throw new EdgeError('message', 'status', {
 })
 ```
 
-[gh-workflow-image]: https://img.shields.io/github/workflow/status/edge/error/test?style=for-the-badge
-[gh-workflow-url]: https://github.com/edge/error/actions/workflows/test.yml "Github action"
+[gh-workflow-image]: https://img.shields.io/github/workflow/status/edge-js/error/test?style=for-the-badge
+[gh-workflow-url]: https://github.com/edge-js/error/actions/workflows/test.yml "Github action"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 [typescript-url]: "typescript"
