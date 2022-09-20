@@ -1,14 +1,12 @@
-<div align="center"><img src="https://res.cloudinary.com/adonis-js/image/upload/v1620150474/edge-banner_tzmnox.jpg" width="600px"></div>
+# edge-error
+> Create errors with custom stack trace pointing to a ".edge" file
 
-# Edge error
-> Create errors custom stack trace pointing to the Edge source file
+[![github-actions-image]][github-actions-url] [![npm-image]][npm-url] [![license-image]][license-url] [![typescript-image]][typescript-url]
 
-[![gh-workflow-image]][gh-workflow-url] [![typescript-image]][typescript-url] [![npm-image]][npm-url] [![license-image]][license-url] [![synk-image]][synk-url]
-
-The package extends the native Error class and adds support for pushing an error stack frame pointing to an Edge template.
+The package extends the native Error class and adds support for pushing an error stack frame pointing to a ".edge" template file.
 
 ## Usage
-Install the package from npm registry as follows
+Install the package from the npm packages registry.
 
 ```bash
 npm i edge-error
@@ -20,7 +18,7 @@ yarn add edge-error
 Then use it as follows
 
 ```js
-const { EdgeError } = require('edge-error')
+import { EdgeError } from 'edge-error'
 
 throw new EdgeError('message', 'status', {
   line: 1,
@@ -29,17 +27,14 @@ throw new EdgeError('message', 'status', {
 })
 ```
 
-[gh-workflow-image]: https://img.shields.io/github/workflow/status/edge-js/error/test?style=for-the-badge
-[gh-workflow-url]: https://github.com/edge-js/error/actions/workflows/test.yml "Github action"
-
-[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
-[typescript-url]: "typescript"
+[github-actions-image]: https://img.shields.io/github/workflow/status/edge-js/error/test?style=for-the-badge
+[github-actions-url]: https://github.com/edge-js/error/actions/workflows/test.yml "github-actions"
 
 [npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
-[npm-url]: https://npmjs.org/package/edge-error 'npm'
+[npm-url]: https://npmjs.org/package/edge-error "npm"
 
 [license-image]: https://img.shields.io/npm/l/edge-error?color=blueviolet&style=for-the-badge
-[license-url]: LICENSE.md 'license'
+[license-url]: LICENSE.md "license"
 
-[synk-image]: https://img.shields.io/snyk/vulnerabilities/github/edge-js/error?label=Synk%20Vulnerabilities&style=for-the-badge
-[synk-url]: https://snyk.io/test/github/edge-js/error?targetFile=package.json "synk"
+[typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
+[typescript-url]:  "typescript"
