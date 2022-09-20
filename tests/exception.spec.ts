@@ -1,16 +1,16 @@
 /*
  * edge-error
  *
- * (c) Harminder Virk <virk@adonisjs.com>
+ * (c) Edge
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-import test from 'japa'
-import { EdgeError } from '../src'
+import { test } from '@japa/runner'
+import { EdgeError } from '../index'
 
-test('raise error with given filename', (assert) => {
+test('raise error with given filename', ({ assert }) => {
   const error = new EdgeError('unclosed tag slot', 'E_UNCLOSED_TAG', {
     line: 2,
     col: 0,
@@ -22,7 +22,7 @@ test('raise error with given filename', (assert) => {
   assert.equal(error.col, 0)
 })
 
-test('patch error stack with the filename and line:col', (assert) => {
+test('patch error stack with the filename and line:col', ({ assert }) => {
   const error = new EdgeError('unclosed tag slot', 'E_UNCLOSED_TAG', {
     line: 2,
     col: 0,

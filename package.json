@@ -1,38 +1,47 @@
 {
   "name": "edge-error",
   "version": "2.0.8",
-  "description": "Create errors custom stack trace pointing to the Edge source file",
-  "main": "build/src/index.js",
+  "description": "Create errors with custom stack trace pointing to the .edge template file",
+  "main": "build/index.js",
   "files": [
-    "build/src"
+    "build/index.d.ts",
+    "build/index.js",
+    "build/types.d.ts",
+    "build/types.js"
   ],
+  "exports": {
+    ".": "./build/index.js",
+    "./types": "./build/types.js"
+  },
   "scripts": {
     "pretest": "npm run lint",
-    "test": "node .bin/test.js",
-    "mrm": "mrm --preset=@adonisjs/mrm-preset",
-    "commit": "git-cz",
-    "clean": "del build",
+    "test": "npm run vscode:test",
+    "vscode:test": "node --require=@adonisjs/require-ts/build/register bin/test.ts",
+    "clean": "del-cli build",
     "compile": "npm run lint && npm run clean && tsc",
     "build": "npm run compile",
     "lint": "eslint . --ext=.ts",
-    "release": "np --message=\"chore(release): %s\"",
+    "release": "np",
     "version": "npm run build",
-    "sync-labels": "github-label-sync --labels ./node_modules/@adonisjs/mrm-preset/gh-labels.json edge-js/error",
+    "sync-labels": "github-label-sync --labels .github/labels.js edge-js/error",
     "format": "prettier --write .",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "edge",
+    "edge-error",
     "edge.js"
   ],
   "author": "virk",
   "license": "MIT",
   "devDependencies": {
-    "@adonisjs/mrm-preset": "^5.0.3",
     "@adonisjs/require-ts": "^2.0.12",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@japa/assert": "^1.3.6",
+    "@japa/run-failed-tests": "^1.1.0",
+    "@japa/runner": "^2.2.1",
+    "@japa/spec-reporter": "^1.3.1",
     "@types/node": "^18.7.18",
-    "commitizen": "^4.2.5",
-    "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^5.0.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
@@ -40,25 +49,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "github-label-sync": "^2.2.0",
     "husky": "^8.0.1",
-    "japa": "^4.0.0",
-    "japa-cli": "^1.0.1",
-    "mrm": "^4.1.6",
     "np": "^7.6.2",
     "prettier": "^2.7.1",
     "typescript": "^4.8.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "nyc": {
-    "exclude": [
-      "test"
-    ],
-    "extension": [
-      ".ts"
-    ]
   },
   "directories": {
     "test": "test"
@@ -71,30 +64,15 @@
     "url": "https://github.com/edge-js/edge-error/issues"
   },
   "homepage": "https://github.com/edge-js/edge-error#readme",
-  "gitHooks": {
-    "commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
-    }
-  },
   "np": {
     "contents": ".",
+    "message": "chore(release): %s",
     "anyBranch": false
   },
-  "mrmConfig": {
-    "core": false,
-    "license": "MIT",
-    "services": [
-      "github-actions"
-    ],
-    "minNodeVersion": "14.15.4",
-    "probotApps": [
-      "stale",
-      "lock"
-    ],
-    "runGhActionsOnWindows": false
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "eslintConfig": {
     "extends": [
