@@ -1,6 +1,6 @@
 {
   "name": "edge-error",
-  "version": "2.0.8",
+  "version": "3.0.0",
   "description": "Create errors with custom stack trace pointing to the .edge template file",
   "main": "build/index.js",
   "files": [
