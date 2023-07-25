@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { ExceptionOptions } from './types.js'
+import type { ExceptionOptions } from './types.js'
 
 export class EdgeError extends Error {
   line: number
