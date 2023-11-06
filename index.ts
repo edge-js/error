@@ -7,14 +7,18 @@
  * file that was distributed with this source code.
  */
 
-import { ExceptionOptions } from './types'
+import type { ExceptionOptions } from './types.js'
 
 export class EdgeError extends Error {
-  public line: number
-  public col: number
-  public filename: string
+  line: number
+  col: number
+  filename: string
 
-  constructor(public message: string, public code: string, options: ExceptionOptions) {
+  constructor(
+    public message: string,
+    public code: string,
+    options: ExceptionOptions
+  ) {
     super(message)
     this.line = options.line
     this.col = options.col

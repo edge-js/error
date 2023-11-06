@@ -8,7 +8,7 @@
  */
 
 import { test } from '@japa/runner'
-import { EdgeError } from '../index'
+import { EdgeError } from '../index.js'
 
 test('raise error with given filename', ({ assert }) => {
   const error = new EdgeError('unclosed tag slot', 'E_UNCLOSED_TAG', {
