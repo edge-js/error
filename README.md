@@ -27,8 +27,8 @@ throw new EdgeError('message', 'status', {
 })
 ```
 
-[github-actions-image]: https://img.shields.io/github/workflow/status/edge-js/error/test?style=for-the-badge
-[github-actions-url]: https://github.com/edge-js/error/actions/workflows/test.yml "github-actions"
+[github-actions-image]: https://img.shields.io/github/actions/workflow/status/edge-js/error/checks.yml?style=for-the-badge
+[github-actions-url]: https://github.com/edge-js/error/actions/workflows/checks.yml "github-actions"
 
 [npm-image]: https://img.shields.io/npm/v/edge-error.svg?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.org/package/edge-error "npm"
