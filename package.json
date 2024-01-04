@@ -1,7 +1,7 @@
 {
   "name": "edge-error",
   "description": "Create errors with custom stack trace pointing to the .edge template file",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "engines": {
     "node": ">=18.16.0"
   },
