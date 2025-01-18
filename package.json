@@ -48,13 +48,13 @@
     "tsup": "^8.3.5",
     "typescript": "^5.7.3"
   },
-  "homepage": "https://github.com/edge-js/edge-error#readme",
+  "homepage": "https://github.com/edge-js/error#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edge-js/edge-error.git"
+    "url": "git+https://github.com/edge-js/error.git"
   },
   "bugs": {
-    "url": "https://github.com/edge-js/edge-error/issues"
+    "url": "https://github.com/edge-js/error/issues"
   },
   "keywords": [
     "edge-error",
